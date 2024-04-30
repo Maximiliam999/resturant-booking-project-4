@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '8W$NA)bn}`]U,f5&Bl{0G]h#2z/YI{'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-maximiliam9-resturantbo-681hm4b2a6i.ws-eu110.gitpod.io','.herokuapp.com']
 
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'menu',
     'booking',
     'cancel',
+    'phonenumber_field',
 ]
 
 MIDDLEWARE = [
@@ -90,6 +91,11 @@ WSGI_APPLICATION = 'mutatio.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.gitpod.io",
+    "https://*.herokuapp.com"
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
