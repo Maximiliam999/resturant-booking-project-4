@@ -22,9 +22,9 @@ from home import views as home_views
 from menu import views as menu_views
 
 urlpatterns = [
-    path('', home_views.my_home, name='home'),
-    path('', include('booking.urls'), name='booking-urls'),
     path('menu/', menu_views.my_menu, name='menu'),
     path('cancel', cancel_views.my_cancel, name='cancel'),
     path('admin/', admin.site.urls),
+    path('booking/', include('booking.urls'), name='booking-urls'), 
+    path('', include('home.urls'), name='home-urls'),
 ]

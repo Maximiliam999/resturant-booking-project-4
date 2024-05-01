@@ -1,9 +1,10 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render,redirect
+from django.views import generic
+
+
 
 # Create your views here.
 
 
-def my_home(request):
-    return HttpResponse("Hello, Blog!")
-
+def index(request):
+    return render(request, 'home.html',)
