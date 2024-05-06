@@ -20,14 +20,15 @@ TIME_CHOICES = (
     ("21:30", "21:30"),
     ("22:00", "22:00"),
     ("22:30", "22:30"),
-    ("23:00", "23:30")
+    ("23:00", "23:00"),
+    ("23:30", "23:30"),
 )
 # Create a instance of a user booking 
 class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     guests = models.IntegerField(choices=GUESTS, default=2)
     date = models.DateField(blank=True, null=True)
-    time = models.CharField(max_length=10, choices=TIME_CHOICES, default=False)
+    time = models.CharField(max_length=5, choices=TIME_CHOICES, default=False)
     name = models.CharField(max_length=200, unique=True)
     phone = PhoneNumberField(null=False, blank=False, unique=True)
     email = models.EmailField()

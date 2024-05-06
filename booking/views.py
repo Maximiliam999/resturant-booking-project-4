@@ -1,4 +1,5 @@
 from django.shortcuts import render,redirect
+from django.core.mail import send_mail
 from django.views import generic
 from .models import Booking
 from .forms import BookingForm 
@@ -9,33 +10,39 @@ from django.db.models import Count
 
 Max_reservations = 20
     
-def book_table(request):
+def create_booking(request):
     if request.method == 'POST':
         booking_form = BookingForm(data=request.POST)
         if booking_form.is_valid():
-            date = form.cleand_data['date']
-            time = form.cleand_data['time']
-            reservations = BookingReservation.objects.filter(date=date, time=time).count()
+            date = booking_form.cleaned_data['date']
+            time = booking_form.cleaned_data['time']
+            reservations = Booking.objects.filter(date=date, time=time).count()
             if reservations >= Max_reservations:
-                messages.add_message(
-                    request, messages.SUCCESS,
-                    'All Tables Full At This Time And Date'
+                messages.error(
+                    request,
+                    'All Tables Are Full At This Time And Date'
                 )
-                return render(request, 'create_booking.html')
-                booking_form.save()
             else:
-                booking_form = BookingForm
-            
-
-            booking_form = BookingForm()
+                booking_form.save()
+                #send email to verify
+                send_email_verification(booking) 
+                messages.add_message(
+                request, messages.SUCCESS,
+                'Reservation Successful!'
+                )
+                       
+    else:
+        booking_form = BookingForm()
+    
+    return render(request,
+    'booking/create_booking.html',
+    {'booking_form':booking_form})
 
 def booking_successful(request):
-    messages.add_message(
-    request, messages.SUCCESS,
-    'Reservation Successful!'
-    )
-    return render(request,
-    'booking/booking.html',
-    {"booking": booking,
-    'booking_form':booking_form}
-    )
+    return render(request, 'booking_succesful.html')
+
+def send_email_verification(booking):
+    subject  = 'Reservation Confirmed'
+    message = 'Your reservation has been confirmed'
+    recipient_email = booking.email
+    send_mail(subject, message, 'maximanuel777@gmail.com', [recipient_email])
