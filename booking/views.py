@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,reverse
 from django.core.mail import send_mail
 from django.views import generic
 from .models import Booking
@@ -19,18 +19,18 @@ def create_booking(request):
             reservations = Booking.objects.filter(date=date, time=time).count()
             if reservations >= Max_reservations:
                 messages.add_message(
-                request, messages.SUCCESS,
+                request, messages.ERROR,
                 'All Tables Are Full At This Time Try Another Day Or Time!'
                 )
             else:
-                booking_form.save()
+                booking = booking_form.save()
                 #send email to verify
                 send_email_verification(booking) 
                 messages.add_message(
                 request, messages.SUCCESS,
                 'Reservation Successful!'
                 )
-                       
+                return redirect(reverse('home') + '?reservation=succes')
     else:
         booking_form = BookingForm()
     
@@ -38,8 +38,6 @@ def create_booking(request):
     'booking/create_booking.html',
     {'booking_form':booking_form})
 
-def booking_successful(request):
-    return render(request, 'booking_succesful.html')
 
 def send_email_verification(booking):
     subject  = 'Reservation Confirmed'
