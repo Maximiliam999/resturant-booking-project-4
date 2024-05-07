@@ -8,7 +8,7 @@ from django.db.models import Count
 
 # Create your views here.
 
-Max_reservations = 20
+Max_reservations = 1
     
 def create_booking(request):
     if request.method == 'POST':
@@ -18,9 +18,9 @@ def create_booking(request):
             time = booking_form.cleaned_data['time']
             reservations = Booking.objects.filter(date=date, time=time).count()
             if reservations >= Max_reservations:
-                messages.error(
-                    request,
-                    'All Tables Are Full At This Time And Date'
+                messages.add_message(
+                request, messages.SUCCESS,
+                'All Tables Are Full At This Time Try Another Day Or Time!'
                 )
             else:
                 booking_form.save()
@@ -45,4 +45,4 @@ def send_email_verification(booking):
     subject  = 'Reservation Confirmed'
     message = 'Your reservation has been confirmed'
     recipient_email = booking.email
-    send_mail(subject, message, 'maximanuel777@gmail.com', [recipient_email])
+    send_mail(subject, message, 'nuitnoire01@hotmail.com', [recipient_email])
