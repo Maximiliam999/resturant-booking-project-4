@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-12 col-md-6 my-5">
+        <h2>Cancel Your Reservation</h2>
+        <form method="post">
+            {{ cancellation_form | crispy }}
+            {% csrf_token %}
+            <button class="btn btn-secondary" type="submit">
+                Cancel Reservation
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

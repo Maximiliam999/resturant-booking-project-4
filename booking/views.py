@@ -1,8 +1,8 @@
 from django.shortcuts import render,redirect,reverse
 from django.core.mail import send_mail
 from django.views import generic
-from .models import Booking
-from .forms import BookingForm 
+from .models import Booking, CancelBooking
+from .forms import BookingForm, CancellationBookingForm
 from django.contrib import messages
 from django.db.models import Count
 
@@ -44,3 +44,25 @@ def send_email_verification(booking):
     message = 'Your reservation has been confirmed'
     recipient_email = booking.email
     send_mail(subject, message, 'nuitnoire01@hotmail.com', [recipient_email])
+
+def cancel_bookings(request):
+    if request.method == 'POST':
+        cancellation_form = CancellationBookingForm(data=request.POST)
+        if cancellation_form.is_valid():
+            name = cancellation_form.cleaned_data['name']
+            phone = cancellation_form.cleaned_data['phone']
+            try:
+                booking_to_cancel = Booking.objects.get(name=name, phone=phone)
+                booking_to_cancel.delete()
+                messages.add_message(
+                request, messages.SUCCESS,
+                'Your Reservation Has Been Cancelled')
+                return redirect(reverse('home') + '?reservation=succes')
+            except Booking.DoesNotExist:
+                messages.add_message(
+                request, messages.ERROR,
+                'No Booking Found With The Name And Phone Provided')
+    else:
+        cancellation_form = CancellationBookingForm()
+
+    return render(request, 'booking/cancel_bookings.html', {'cancellation_form': cancellation_form})

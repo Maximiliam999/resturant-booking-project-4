@@ -14,8 +14,8 @@
                 Submit
             </button>
         </form>
-        <!-- add your form here. Your submit button should 
-                            have the classes of btn, btn-secondary -->
+        <a class="nav-link {% if request.path == cancel_bookings_url %}active{% endif %}" aria-current="page" href="{% url 'cancel_bookings' %}">
+        <button  class="btn btn-secondary">Cancel Reservation</button></a>
     </div>
 </div>
 {% endblock %}

@@ -32,7 +32,14 @@ class Booking(models.Model):
     name = models.CharField(max_length=200, unique=True)
     phone = PhoneNumberField(null=False, blank=False, unique=True)
     email = models.EmailField()
-    verify_length = models.BooleanField(default=False)
-    verify_cancelation_policy = models.BooleanField(default=False)
+    verify_length = models.BooleanField(default=False, null=False)
+    verify_cancelation_policy = models.BooleanField(default=False, null=False)
     def __str__(self):
         return f"{self.name} | Date: {self.date} | Time: {self.time}"
+
+class CancelBooking(models.Model):
+    booking = models.OneToOneField(Booking, on_delete=models.CASCADE, primary_key=True)
+    name = models.CharField(max_length=200, unique=True)
+    phone = PhoneNumberField(null=False, blank=False, unique=True)
+    def __str__(self):
+        return f"Cancellation for: {self.booking.name}| Phone: {self.phone}"
