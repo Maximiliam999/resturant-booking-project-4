@@ -32,8 +32,7 @@ class Booking(models.Model):
     name = models.CharField(max_length=200, unique=True)
     phone = PhoneNumberField(null=False, blank=False, unique=True)
     email = models.EmailField()
-    verify_length = models.BooleanField(default=False, null=False)
-    verify_cancelation_policy = models.BooleanField(default=False, null=False)
+    verify_cancellation_policy = models.BooleanField(default=False, verbose_name= 'Cancellation Policy Agreement | You Have Read And Understand That You Can Need To Cancel Your Reservation Atleast 4 Hours Before Your Reserved Time', help_text='Please check this box to confirm you have read and agree to the cancellation policy')
     def __str__(self):
         return f"{self.name} | Date: {self.date} | Time: {self.time}"
 

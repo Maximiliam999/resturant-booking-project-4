@@ -4,11 +4,12 @@ from django.views import generic
 from .models import Booking, CancelBooking
 from .forms import BookingForm, CancellationBookingForm
 from django.contrib import messages
-from django.db.models import Count
+from django.db.models import Count, Sum
 
 # Create your views here.
 
-Max_reservations = 1
+Max_reservations = 10
+Max_guests = 25 
     
 def create_booking(request):
     if request.method == 'POST':
@@ -16,11 +17,25 @@ def create_booking(request):
         if booking_form.is_valid():
             date = booking_form.cleaned_data['date']
             time = booking_form.cleaned_data['time']
+            guests = booking_form.cleaned_data['guests']
+            cancellation = booking_form.cleaned_data['verify_cancellation_policy']
             reservations = Booking.objects.filter(date=date, time=time).count()
+            all_guests = Booking.objects.filter(date=date, time=time).aggregate(Sum('guests'))['guests__sum']
+            all_guests = all_guests or 0 
             if reservations >= Max_reservations:
                 messages.add_message(
                 request, messages.ERROR,
-                'All Tables Are Full At This Time Try Another Day Or Time!'
+                'Sadly Max Reservations Met Pick Another Time Or Day!'
+                )
+            elif all_guests + guests >= Max_guests:
+                messages.add_message(
+                request, messages.ERROR,
+                'Sadly Max Occupancy Met Pick Another Time Or Day!'
+                )
+            elif cancellation == False:
+                messages.add_message(
+                    request, messages.ERROR,
+                    'Please accept the cancellation policy before booking'
                 )
             else:
                 booking = booking_form.save()

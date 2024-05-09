@@ -8,11 +8,13 @@ class BookingForm(forms.ModelForm):
     phone = PhoneNumberField(widget=PhoneNumberPrefixWidget)
     class Meta:
         model = Booking
-        fields = ('guests', 'date', 'time', 'name', 'phone', 'email', 'verify_length', 'verify_cancelation_policy')
+        fields = ('guests', 'date', 'time', 'name', 'phone', 'email', 'verify_cancellation_policy')
         widgets = { 'date': DateInput(attrs={'type': 'date'})}
         
+
 class CancellationBookingForm(forms.ModelForm):
+    phone = PhoneNumberField(widget=PhoneNumberPrefixWidget)
     class Meta:
         model = CancelBooking
         fields = ('name', 'phone')
-    
+        
