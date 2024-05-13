@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<h1>Hello</h1>
+<div class="container-fluid g-0 landing-image">
+    <div class="row g-0">
+        <div class="col">
+            <img class="lasagna opacity-75" src="{% static 'images/lasagna.jpg' %}">
+            <h1 class="top-left">Mutatio Always Homemade</h1>
+            <img class="chefs-hat" src="{% static 'images/chefs-hat.png' %}">
+            <p class="text-center-landing slogan">Paradise For Pasta Lovers By Pasta Lovers</p>
+        </div>
+    </div>
+</div>
 
 {% endblock content %}
