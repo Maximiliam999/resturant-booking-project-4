@@ -4,6 +4,10 @@
     padding-top: 0;
 }
 
+body{
+    background-color: rgb(207, 185, 151);
+}
+
 /* ----------------------------------------Landing Page */
 .landing-image {
     position: relative;
@@ -11,7 +15,12 @@
     background-color: black;
     z-index: 1;
 }
-
+.martino-image {
+    position: relative;
+    text-align: center;
+    background-color: rgb(207, 185, 151);
+    z-index: 1;
+}
 .slogan{
     font-size: 20px;
 }
@@ -30,6 +39,24 @@
     transform: translate(-50%, -50%);
     color: rgb(230, 222, 3);
 }
+.text-center-martino {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(224, 202, 0);
+}
+.text-center-top {
+    position: absolute;
+    bottom: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(230, 222, 3);
+}
+.fara-san-martino{
+    filter: brightness(70%);
+}
+
 
 .chefs-hat {
     z-index: 2;
@@ -41,6 +68,18 @@
     max-width: 15%;
     max-height: 15%;
 }
+
+.promises{
+    text-align: center;
+    
+}
+
+.restaurant-history{
+    position: relative;
+    text-align: center;
+    background-color: rgb(207, 185, 151);
+}
+
 
 /* ----------------------------------------Special paddings/margins/text */
 

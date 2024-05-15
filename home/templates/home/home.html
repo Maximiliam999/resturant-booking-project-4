@@ -1,13 +1,52 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="container-fluid g-0 landing-image">
+<div class="container-fluid g-0 ">
     <div class="row g-0">
+        <div class="col landing-image">
+            <img class="lasagna opacity-75" src="{% static 'images/lasagna.jpg' %}" alt="Picture of lasagna">
+            <div class="top-left">
+                <h1>Mutatio Always Homemade</h1>
+            </div>
+            <img class="chefs-hat" src="{% static 'images/chefs-hat.png' %}" alt="Illustration Of A Chefs Hat">
+            <div class="text-center-landing slogan">
+            <p >Paradise For Pasta Lovers By Pasta Lovers</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container promises-container">
+    <div class="row promises">
         <div class="col">
-            <img class="lasagna opacity-75" src="{% static 'images/lasagna.jpg' %}">
-            <h1 class="top-left">Mutatio Always Homemade</h1>
-            <img class="chefs-hat" src="{% static 'images/chefs-hat.png' %}">
-            <p class="text-center-landing slogan">Paradise For Pasta Lovers By Pasta Lovers</p>
+            <i class="fa-solid fa-check"></i>
+            <h2>First Promise</h2>
+            <p>We at Mutatio Promise Our Customers That All Our Pasta Dishes Include Fresh Pasta</p>
+        </div>
+        <div class="col">
+            <i class="fa-solid fa-check"></i>
+            <h2>Second Promise</h2>
+            <p>We At Mutatio Promise Our Customers That All Our Pasta Is Made In The Restaurant By Seasoned Chefs</p>
+        </div>
+        <div class="col">
+            <i class="fa-solid fa-check"></i>
+            <h2>Third Promise </h2>
+            <p>We At Mutatio Promise Our Customers That Service Will Be Amazing Thanks To Our Great Chefs And Our Hosts And Hostesses</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col martino-image">
+            <img class="rounded mx-auto d-block fara-san-martino" src ="{% static 'images/fara-san-martino.jpg'%}" alt="Image of Fara San Martino" >
+            <div class="text-center-top">
+                <h2>Famiglia Mutatio</h2>
+            </div>
+            <div class="text-center-martino">
+                <p>This Restaurant Was Started By The Mutatios In Fara San Martino In The Year 1783 And Has Then Gone From Heir To Heir Since The Start. The Restaurant Has Upgraded But Recipes Are All Derived From The Original Menu Which Is What Makes Us So Unique Come Get A Taste Of Old Italy At Mutatios</p>
+            </div>
+            
         </div>
     </div>
 </div>
