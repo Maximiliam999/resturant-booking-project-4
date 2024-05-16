@@ -3,10 +3,10 @@
 {% block content %}
 <div class="container-fluid g-0 ">
     <div class="row g-0">
-        <div class="col landing-image">
+        <div class="col-12 landing-image">
             <img class="lasagna opacity-75" src="{% static 'images/lasagna.jpg' %}" alt="Picture of lasagna">
-            <div class="top-left">
-                <h1>Mutatio Always Homemade</h1>
+            <div id="mutatio">
+                <h1 class="mutatio-header">Mutatio Always Homemade</h1>
             </div>
             <img class="chefs-hat" src="{% static 'images/chefs-hat.png' %}" alt="Illustration Of A Chefs Hat">
             <div class="text-center-landing slogan">
@@ -15,7 +15,7 @@
         </div>
     </div>
 </div>
-<div class="container promises-container">
+<div class="container-fluid promises-container">
     <div class="row promises">
         <div class="col">
             <i class="fa-solid fa-check"></i>
@@ -36,14 +36,14 @@
 </div>
 
 
-<div class="container">
-    <div class="row">
-        <div class="col martino-image">
-            <img class="rounded mx-auto d-block fara-san-martino" src ="{% static 'images/fara-san-martino.jpg'%}" alt="Image of Fara San Martino" >
+<div class="container-fluid g-0">
+    <div class="row g-0">
+        <div class="col-12 italy-image">
+            <img src ="{% static 'images/alley-italy.jpg'%}" alt="Image of alley in Italy" >
             <div class="text-center-top">
                 <h2>Famiglia Mutatio</h2>
             </div>
-            <div class="text-center-martino">
+            <div class="text-center-italy-image">
                 <p>This Restaurant Was Started By The Mutatios In Fara San Martino In The Year 1783 And Has Then Gone From Heir To Heir Since The Start. The Restaurant Has Upgraded But Recipes Are All Derived From The Original Menu Which Is What Makes Us So Unique Come Get A Taste Of Old Italy At Mutatios</p>
             </div>
             
@@ -52,3 +52,7 @@
 </div>
 
 {% endblock content %}
+
+{% block extras %}
+<script src=" {% static 'js/script.js' %}"></script>
+{% endblock %}

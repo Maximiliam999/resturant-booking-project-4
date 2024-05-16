@@ -1,8 +1,9 @@
+
+  
+
+
 /*--------------------------------------------Colors*/
-.opentime {
-    color: white;
-    padding-top: 0;
-}
+
 
 body{
     background-color: rgb(207, 185, 151);
@@ -14,17 +15,42 @@ body{
     text-align: center;
     background-color: black;
     z-index: 1;
+    font-family: "Italianno", cursive;
 }
-.martino-image {
+.landing-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+.italy-image {
     position: relative;
     text-align: center;
     background-color: rgb(207, 185, 151);
     z-index: 1;
+    padding: 0;
+    margin: 0;
+    
+}
+.italy-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 .slogan{
-    font-size: 20px;
+    font-size: 25px;
 }
-
+.mutatio-header {
+    font-size: 70px;
+}
+#mutatio {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    bottom: 85%;
+    left: 50%;
+    color: rgb(230, 222, 3);
+}
 .top-left {
     position: absolute;
     top: 8px;
@@ -39,7 +65,7 @@ body{
     transform: translate(-50%, -50%);
     color: rgb(230, 222, 3);
 }
-.text-center-martino {
+.text-center-italy-image {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -53,9 +79,7 @@ body{
     transform: translate(-50%, -50%);
     color: rgb(230, 222, 3);
 }
-.fara-san-martino{
-    filter: brightness(70%);
-}
+
 
 
 .chefs-hat {
@@ -71,6 +95,9 @@ body{
 
 .promises{
     text-align: center;
+    border: 1px solid black;
+    background-color: grey;
+    color: white;
     
 }
 
@@ -85,11 +112,45 @@ body{
 
 /*--------------------------------------------Heading*/
 .navbar{
-    opacity: 0.75;
-    background-color: rgb(207, 185, 151);
-    color: rgb(207, 185, 151);
+    background-image: url("lasagna.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-color 0.5s;
 }
-
+.navbar.scrolled {
+    background-color: grey;
+    border: 1px solid grey;
+}
+.circle {
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    left: -40px;
+    transform: translateY(-50%);
+    animation: rotateCircle 5s linear infinite;
+}
+@keyframes rotateCircle {
+    from {
+        transform: translateY(-50%) rotate(0deg);
+    }
+    to {
+        transform: translateY(50%) rotate(360deg);
+    }
+}
+.opentime {
+    color: black;
+    text-align: center;
+    position: absolute;
+    top: 15px;
+    right: 8px;
+    
+}
 /* ----------------------------------------Footer */
+.base-footer{
+    background-color: rgb(22, 103, 173);
+}
 
 /* ----------------------------------------Media Queries */
