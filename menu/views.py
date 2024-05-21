@@ -1,9 +1,10 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render,redirect
+from django.views import generic
+
+
 
 # Create your views here.
 
 
-def my_menu(request):
-    return HttpResponse("Hello, Blog!")
-
+def menu(request):
+    return render(request, 'menu/menu.html',)

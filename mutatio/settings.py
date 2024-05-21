@@ -30,7 +30,7 @@ SECRET_KEY = '8W$NA)bn}`]U,f5&Bl{0G]h#2z/YI{'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-maximiliam9-resturantbo-681hm4b2a6i.ws-eu111.gitpod.io','.herokuapp.com']
+ALLOWED_HOSTS = ['8000-maximiliam9-resturantbo-681hm4b2a6i.ws-eu114.gitpod.io','.herokuapp.com']
 
 
 # Application definition
@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'home',
     'menu',
     'booking',
-    'cancel',
     'phonenumber_field',
     'crispy_forms',
     'crispy_bootstrap5',
