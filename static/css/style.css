@@ -1,9 +1,16 @@
 
   
-
+body{
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
 
 /*--------------------------------------------Colors*/
-
+.background-gray {
+    background-color: rgb(44, 44, 44);
+}
 
 /* ----------------------------------------Landing Page */
 .landing-image {
@@ -32,7 +39,7 @@
     height: auto;
     display: block;
     object-fit: cover;
-    opacity: 0.6;
+    filter: brightness(50%);
 }
 .slogan{
     font-size: 35px;
@@ -69,14 +76,6 @@
     max-width: 15%;
     max-height: 15%;
 }
-.navbar-toggler-icon {
-    background-color: var(--bs-dark) !important;
-    color: var(--bs-dark) !important;
-}
-.navbar-toggler{
-    background-color: var(--bs-dark) !important;
-    color: var(--bs-dark) !important;
-}
 .promises{
     text-align: center;
     background-color: rgb(44, 44, 44);
@@ -85,13 +84,14 @@
 }
 #history-name {
     font-size: 80px !important;
+    color: rgb(207, 185, 151);
 }
 
 #history-story{
     color: white !important;
     font-size: 40px;
 }
-h2 {
+.promises-container h2 {
     color: rgb(207, 185, 151);
 }
 
@@ -129,8 +129,12 @@ h2 {
     bottom: 0;
     right: 16px;
 }
+.solid-border{
+    border: solid 1px black;
+}
 .italianno-font {
     font-family: "Italianno", cursive;
+    font-weight: 200;
 }
 .oswald-font {
     font-family: "Oswald", sans-serif;
@@ -175,6 +179,14 @@ li.nav-item {
 .nav-tabs{
     border-bottom: none;
 }
+.navbar-toggler-icon {
+    background-color: var(--bs-gray-700) !important;
+    color: var(--bs-gray-700) !important;
+}
+.navbar-toggler{
+    background-color: var(--bs-gray-700) !important;
+    color: var(--bs-gray-700) !important;
+}
 .circle {
     width: 30px;
     height: 30px;
@@ -207,6 +219,111 @@ li.nav-item {
     margin-top: 20px;
     margin-bottom: 60px;
 }
+
+
+/*--------------------------------------------Menu*/
+#menu-header{
+    text-align: center;
+    padding: 50px;
+    margin: 15px;
+}
+
+#starter-header{
+    text-align: center;
+}
+
+#main-course-header {
+    text-align: center;
+}
+
+#dessert-header{
+    text-align: center;
+}
+
+.starter{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    mask-position: 5%;
+    z-index: 1;
+    
+}
+
+.main-course{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+}
+
+.dessert{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+}
+
+.starter-img{
+    position: relative;
+    text-align: center;
+    z-index: 0;
+    padding: 0;
+    margin: 0;
+}
+.starter-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    filter: brightness(80%);
+}
+.main-course-img {
+    position: relative;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.main-course-img img {
+    width: 100%;
+    height: 985px;
+    display: block;
+    object-fit: cover;
+}
+
+.desert-img {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.desert-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* ----------------------------------------Booking Form */
+
+.booking-form{
+    border-style: ridge;
+    border-width: 15px;
+    border-color: rgb(44, 44, 44);
+    text-align: center;
+}
+
+.booking-page {
+    background-color: rgb(44, 44, 44);
+    padding-top: 50px;
+}
+
+#hint_id_verify_cancellation_policy{
+    color: white;
+}
+
 /* ----------------------------------------Footer */
 .base-footer{
     position: relative;
@@ -214,7 +331,7 @@ li.nav-item {
     bottom: 0;
     width: 100%;
     border-style: groove;
-    border-color: white;
+    border-color: rgb(44, 44, 44);
     border-width: 5px;
     background-color: rgb(22, 22, 22);
     font-family: "Oswald", sans-serif;
@@ -222,6 +339,7 @@ li.nav-item {
     font-weight: 700;
     font-style: normal;
     z-index: 3;
+    color: white;
 }
 
 .made-by{
