@@ -1,12 +1,19 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<h1 id="menu-header">MENU</h1>
 <div class="container-fluid g-0">
     <div class="row g-0">
-        <div class="col-12 solid-border background-gray text-white">
-            <h2 id="starter-header">STARTER</h2>
-            <div class="starter oswald-font">
+        <div class="col-12 menu-header-img"> 
+            <img  src="{% static 'images/fara-san-martino.jpg'%}" alt="picture of fara san martino, city in Italy">
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid g-0 menu-options">
+    <div class="row g-0">
+        <div class="col-12 background-brown text-white">
+            <h2 class="text-center-align" id="starter-header">STARTER</h2>
+            <div class="oswald-font">
                 <p>Classic Bruschetta/Toasted bread rubbed with garlic topped with marinated tomatoes/15€</p>
                 <p>Italian Sausage Stuffed Peppers/Peppers filled with spicy italian ground sausage, mushrooms and spices/18€</p>
                 <p>Caprese Salad/Salad with fresh mozzarella, tomatoes, fresh basil, olive oil, salt and peppar/12€</p>
@@ -18,11 +25,12 @@
     <img src="{% static 'images/starter-img.jpg'%}" alt="image of Bruschetta">
 </div>
 
-<div class="container-fluid g-0">
+<div class="container-fluid g-0 menu-options">
     <div class="row g-0">
-        <div class="col-12 solid-border  background-gray text-white">
-            <h2 id="main-course-header">MAIN-COURSE</h2>
-            <div class="main-course oswald-font">
+        <div class="col-12 background-brown text-white">
+            <h2 class="text-center-align" id="main-course-header">MAIN-COURSE</h2>
+            
+            <div class="oswald-font">
                 <p>Bolognese Meat Sauce/Ground beef chuck coocked in a tomato sauce on top of fresh pasta, served with parmigiano-reggiano cheese/25€</p>
                 <p>Chicken Scarpariello/Chicken sautéed in a tangy lemon glaze with bell pepper/30€</p>
                 <p>Tuscan Grilled Trout/Garlic and herb infused oil combined with wine vinegar acts as a basting liquid and sauce for the fish/35€</p>
@@ -36,11 +44,11 @@
     <img src="{% static 'images/pasta-main-course.jpg'%}" alt="image of Bolognese">
 </div>
 
-<div class="container-fluid g-0">
+<div class="container-fluid g-0 menu-options">
     <div class="row g-0">
-        <div class="col-md-12 solid-border  background-gray text-white">
-            <h2 id="dessert-header">DESSERT</h2>
-            <div class="dessert oswald-font">
+        <div class="col-md-12 background-brown text-white">
+            <h2 class="text-center-align" id="dessert-header">DESSERT</h2>
+            <div class="oswald-font">
                 <p>Tiramisu/Mascarpone layerd with cofee soaked ladyfingers/15€</p>
                 <p>Pistachio Stracciatella Gelato/Denser ice cream with the taste of stracciatella and pistachio/10€</p>
                 <p>Zabaglione with Strawberris/A sweet custurd spiked with marsala wine and strawberris/12€</p>
