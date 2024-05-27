@@ -183,6 +183,7 @@ body{
     color: rgb(245, 229, 205);
 
 }
+
 .nav-link {
     background: transparent !important;
     margin-left: 5px !important;
@@ -339,6 +340,7 @@ li.nav-item {
     border-width: 15px;
     border-color: rgb(44, 44, 44);
     text-align: center;
+    margin-bottom: 15px;
 }
 
 .booking-page {
@@ -350,12 +352,16 @@ li.nav-item {
     color: white;
 }
 
+.form-buttons {
+    background-color: black;
+}
+
 /* ----------------------------------------Footer */
 .base-footer{
-    position: relative;
+    position: absolute;
     text-align: center;
-    bottom: 0;
     width: 100%;
+    bottom: auto;
     border-style: groove;
     border-color: rgb(44, 44, 44);
     border-width: 5px;
@@ -364,7 +370,6 @@ li.nav-item {
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    z-index: 3;
     color: white;
 }
 
@@ -375,3 +380,15 @@ li.nav-item {
 }
 
 /* ----------------------------------------Media Queries */
+
+@media screen and (max-width:1440px) {
+    li.nav-item {
+        font-size: 35px !important;
+    }
+    h1.mutatio-header {
+        font-size: 50px;
+    }
+    p.opentime {
+        font-size: 20px;
+    }
+}

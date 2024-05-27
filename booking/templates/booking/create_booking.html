@@ -13,10 +13,10 @@
                     {% csrf_token %}    
                 </form>
             </div>
-            <button class="btn btn-secondary" type="submit" aria-label="submit">Submit
+            <button class="btn btn-secondary form-buttons" type="submit" aria-label="submit">Submit
             </button>
-            <a class="nav-link {% if request.path == cancel_bookings_url %}active{% endif %}" aria-current="page" href="{% url 'cancel_bookings' %}">
-            <button  type="button" class="btn btn-secondary" aria-label="cancel reservation">Cancel Reservation</button></a>
+            <a class=" {% if request.path == cancel_bookings_url %}active{% endif %}" aria-current="page" href="{% url 'cancel_bookings' %}">
+            <button  type="button" class="btn btn-secondary form-buttons" aria-label="cancel reservation">Cancel Reservation</button></a>
         </div>
     </div>
 </div>
