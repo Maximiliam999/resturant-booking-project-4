@@ -48,15 +48,12 @@ body{
     color: white !important;
 }
 .mutatio-header {
-    margin-top: -100px !important;
-    margin-bottom: 0px !important;
-    padding-top: 20px;
     font-size: 70px;
 }
 #mutatio {
     position: absolute;
     transform: translate(-50%, -50%);
-    bottom: 85%;
+    bottom: 75%;
     left: 50%;
     color: rgb(245, 229, 205);
 }
@@ -109,7 +106,7 @@ body{
 }
 
 #history-name {
-    font-size: 80px !important;
+    font-size: 80px;
     color: rgb(245, 229, 205);
 }
 
@@ -186,7 +183,7 @@ body{
 
 .nav-link {
     background: transparent !important;
-    margin-left: 5px !important;
+    margin-left: 5px ;
     font-family: "Italianno", cursive;
     color: rgb(245, 229, 205);
 }
@@ -244,10 +241,12 @@ li.nav-item {
     right: 8px;
     font-size: 35px;
 }
-.home-button {
-    font-size: 70px;
-    margin-top: 20px;
-    margin-bottom: 60px;
+#home-button {
+    font-size: 100px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
@@ -388,7 +387,146 @@ li.nav-item {
     h1.mutatio-header {
         font-size: 50px;
     }
+    .mutatio-header{
+        padding-top: 35px;
+    }
     p.opentime {
         font-size: 20px;
+    }
+    .promises{
+        display: block !important;
+        margin-left: 450px;
+        border: none;
+    }
+    div.circle-promises{
+        height: 200px;
+        padding-bottom: 20px;
+        padding-top: 0;
+    }
+    .circle-promises p  {
+        padding-top: 25px;
+    }
+}
+
+@media screen and (max-width:1030px) {
+    .promises{
+        margin-left: 250px;
+    }
+    li.nav-item {
+        font-size: 30px !important;
+    }
+    h1.mutatio-header {
+        font-size: 30px;
+    }
+    a.nav-link.center-content.active{
+        padding-bottom: 40px;
+
+    }
+    p#history-story{
+        margin-top: 40px;
+        font-size: 30px;
+    }
+    h2#history-name{
+        font-size: 40px;
+        margin-bottom: 0;
+    }
+    p.bottom-left {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .promises{
+        margin-left: 140px;
+    }
+    li.nav-item {
+        font-size: 22px !important;
+    }
+    h1.mutatio-header {
+        font-size: 25px;
+    }
+    a.nav-link.center-content.active{
+        font-size: 50px;
+    }
+    p#history-story{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:320px){
+    .promises{
+        margin-left: 50px;
+        margin-right: 10px;
+    }
+    .promises-col{
+        padding: 0;
+    }
+    div.circle-promises{
+        height: 100px;
+        width: 90%;
+    }
+    .circle-promises {
+        line-height: 15px;
+    }
+    .circle-promises p  {
+        padding-top: 0px;
+        font-size: 7px;
+    }
+    .circle-promises h2{
+        font-size: 15px;
+        margin-bottom: 0;
+    }
+    li.nav-item {
+        font-size: 12px !important;
+        display: block;
+        border: none;
+    }
+    .nav-tabs .nav-link.active {
+        border-width: 1px;
+    }
+    .nav-link {
+        margin-left: 1px;
+    }
+    .nav-tabs .nav-link.active{
+        border: none;
+    }
+    .navbar-nav {
+        display: block;
+    }
+    h1.mutatio-header {
+        font-size: 14px;
+    }
+    #mutatio{
+        bottom: 50%;
+    }
+    a.nav-link.center-content.active{
+        font-size: 35px;
+    }
+    #home-button{
+        font-size: 40px;
+    }
+    .slogan p {
+        font-size: 12px;
+    }
+    p.opentime {
+        font-size: 12px;
+    }
+    p#history-story{
+        margin-top: 40px;
+        font-size: 10px;
+    }
+    h2#history-name{
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+    .footer {
+        font-size: 9px;
+    }
+    p.made-by{
+        width: 25%;
+        right: 0;
+    }
+    p.bottom-left{
+        left: 0;
     }
 }
