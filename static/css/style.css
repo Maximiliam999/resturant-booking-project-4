@@ -174,7 +174,6 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    padding-bottom: px;
     width: 100%;
     z-index: 2;
     color: rgb(245, 229, 205);
@@ -381,20 +380,25 @@ li.nav-item {
 /* ----------------------------------------Media Queries */
 
 @media screen and (max-width:1440px) {
+    #home-button{
+        margin-top: 10px;
+    }
     li.nav-item {
-        font-size: 35px !important;
+        font-size: 35px;
     }
     h1.mutatio-header {
         font-size: 50px;
     }
     .mutatio-header{
         padding-top: 35px;
+        margin-bottom: 0;
     }
     p.opentime {
-        font-size: 20px;
+        font-size: 40px;
+        margin-top: 10px;
     }
     .promises{
-        display: block !important;
+        display: block;
         margin-left: 450px;
         border: none;
     }
@@ -413,14 +417,20 @@ li.nav-item {
         margin-left: 250px;
     }
     li.nav-item {
-        font-size: 30px !important;
+        font-size: 27px;
+    }
+    p.opentime{
+        font-size: 35px;
     }
     h1.mutatio-header {
         font-size: 30px;
+        margin-left: 25px;
+    }
+    .chefs-hat{
+        margin-left: 15px;
     }
     a.nav-link.center-content.active{
         padding-bottom: 40px;
-
     }
     p#history-story{
         margin-top: 40px;
@@ -433,6 +443,11 @@ li.nav-item {
     p.bottom-left {
         width: 25%;
     }
+    #home-button{
+        margin-left: 25px;
+        margin-top: 0;
+    }
+
 }
 
 @media screen and (max-width:768px) {
@@ -440,20 +455,38 @@ li.nav-item {
         margin-left: 140px;
     }
     li.nav-item {
-        font-size: 22px !important;
+        font-size: 22px;
     }
     h1.mutatio-header {
-        font-size: 25px;
+        font-size: 30px;
     }
-    a.nav-link.center-content.active{
-        font-size: 50px;
+    #home-button{
+        font-size: 70px;
+        top: 40px;
     }
     p#history-story{
         font-size: 20px;
     }
+    #mutatio{
+        bottom: 70%;
+    }
+    p.opentime{
+        font-size: 25px;
+    }
+    p.made-by{
+        width: 25%;
+        right: 0;
+        margin-bottom: 0;
+    }
+    p.bottom-left{
+        left: 0;
+        margin-bottom: 0;
+    }
 }
 
-@media screen and (max-width:320px){
+
+
+@media screen and (max-width:430px){
     .promises{
         margin-left: 50px;
         margin-right: 10px;
@@ -476,57 +509,88 @@ li.nav-item {
         font-size: 15px;
         margin-bottom: 0;
     }
-    li.nav-item {
-        font-size: 12px !important;
-        display: block;
-        border: none;
-    }
-    .nav-tabs .nav-link.active {
-        border-width: 1px;
-    }
-    .nav-link {
-        margin-left: 1px;
-    }
-    .nav-tabs .nav-link.active{
-        border: none;
+    .nav-links{
+        left: 2px;
+        top: 0;
     }
     .navbar-nav {
-        display: block;
+        display: block !important;
+        width: 50px;
     }
-    h1.mutatio-header {
-        font-size: 14px;
+    .cancel-reservation {
+        padding-top: 50px;
+    }
+    .create-reservation{
+        padding-top: 50px;
+    }
+    li.nav-item {
+        font-size: 18px;
+    }
+    .nav-tabs .nav-link.active {
+        border-width: 4px;
+    }
+    .nav-link {
+        margin-left: 0px;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    h1.mutatio-header{
+        font-size: 20px;
     }
     #mutatio{
-        bottom: 50%;
-    }
-    a.nav-link.center-content.active{
-        font-size: 35px;
+        bottom: 60%;
     }
     #home-button{
-        font-size: 40px;
+        font-size: 30px;
+        top: 25px;
+        margin-left: 25px;
+    }
+    .chefs-hat{
+        margin-top: 20px;
     }
     .slogan p {
-        font-size: 12px;
+        font-size: 20px;
+        margin-bottom: 0;
+        margin-top: 15px;
     }
     p.opentime {
-        font-size: 12px;
+        font-size: 15px;
+        margin-top: 0px;
     }
     p#history-story{
-        margin-top: 40px;
-        font-size: 10px;
+        margin-top: 100px;
+        font-size: 1.1rem;
     }
     h2#history-name{
-        font-size: 20px;
+        font-size: 30px;
         margin-bottom: 0;
     }
     .footer {
+        font-size: 10px;
+    }
+    .py-5 {
+        padding-bottom: 0 !important;
+    }
+}
+
+@media screen and (max-width:320px) {
+    li.nav-item {
         font-size: 9px;
     }
-    p.made-by{
-        width: 25%;
-        right: 0;
+    #home-button{
+        font-size: 30px;
+        top: 20px;
+        margin-left: 20px;
     }
-    p.bottom-left{
-        left: 0;
+    p.opentime{
+        font-size: 10px;
+        margin-top: 0;
+        padding-bottom: 15px;
+    }
+    .slogan p {
+        margin-left: 10px;
+    }
+    .footer {
+        font-size: 8px;
     }
 }
