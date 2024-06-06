@@ -417,7 +417,11 @@ li.nav-item {
         margin-left: 250px;
     }
     li.nav-item {
-        font-size: 27px;
+        font-size: 33px;
+    }
+    .nav-links {
+        top: 10px;
+        left: 0px;
     }
     p.opentime{
         font-size: 35px;
@@ -434,17 +438,16 @@ li.nav-item {
     }
     p#history-story{
         margin-top: 40px;
-        font-size: 30px;
+        width: 650px;
     }
     h2#history-name{
-        font-size: 40px;
         margin-bottom: 0;
     }
     p.bottom-left {
         width: 25%;
     }
     #home-button{
-        margin-left: 25px;
+        margin-left: 30px;
         margin-top: 0;
     }
 
@@ -455,7 +458,7 @@ li.nav-item {
         margin-left: 140px;
     }
     li.nav-item {
-        font-size: 22px;
+        font-size: 26px;
     }
     h1.mutatio-header {
         font-size: 30px;
@@ -465,7 +468,12 @@ li.nav-item {
         top: 40px;
     }
     p#history-story{
-        font-size: 20px;
+        font-size: 30px;
+        width: 500px;
+    }
+    h2#history-name{
+        margin-bottom: 0;
+        font-size: 60px;
     }
     #mutatio{
         bottom: 70%;
@@ -511,20 +519,20 @@ li.nav-item {
     }
     .nav-links{
         left: 2px;
-        top: 0;
+        top: 5px;
     }
     .navbar-nav {
         display: block !important;
-        width: 50px;
+        width: 58px;
     }
     .cancel-reservation {
-        padding-top: 50px;
+        padding-top: 70px;
     }
     .create-reservation{
-        padding-top: 50px;
+        padding-top: 70px;
     }
     li.nav-item {
-        font-size: 18px;
+        font-size: 22px;
     }
     .nav-tabs .nav-link.active {
         border-width: 4px;
@@ -536,6 +544,7 @@ li.nav-item {
     }
     h1.mutatio-header{
         font-size: 20px;
+        margin-left: 0;
     }
     #mutatio{
         bottom: 60%;
@@ -543,7 +552,7 @@ li.nav-item {
     #home-button{
         font-size: 30px;
         top: 25px;
-        margin-left: 25px;
+        margin-left: 0;
     }
     .chefs-hat{
         margin-top: 20px;
@@ -558,8 +567,9 @@ li.nav-item {
         margin-top: 0px;
     }
     p#history-story{
-        margin-top: 100px;
+        margin-top: 50px;
         font-size: 1.1rem;
+        width: 325px;
     }
     h2#history-name{
         font-size: 30px;
@@ -575,12 +585,11 @@ li.nav-item {
 
 @media screen and (max-width:320px) {
     li.nav-item {
-        font-size: 9px;
+        font-size: 18px;
     }
     #home-button{
         font-size: 30px;
         top: 20px;
-        margin-left: 20px;
     }
     p.opentime{
         font-size: 10px;
@@ -593,4 +602,15 @@ li.nav-item {
     .footer {
         font-size: 8px;
     }
+    p#history-story{
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+        width: 300px;
+ 
+    }
+    h2#history-name{
+        font-size: 25px;
+        line-height: 1;
+    }
 }
+/*MAKE NAV ITEMS BIGGER AND MOVE HEADER CHECK PHONE TO SEE IF IT'S GOOD*/
