@@ -15,36 +15,43 @@
         </div>
     </div>
 </div>
-<div class="container-fluid promises-container">
-    <div class="row promises oswald-font">
-        <div class="col-md-4 promises-col">
-            <div class="circle-promises">
-                <i class="fa-solid fa-check"></i>
-                <h2>First Promise</h2>
-                <p>We at Mutatio Promise Our Customers That All<br> Our Pasta Dishes Include Fresh Pasta</p>
-            </div>
+
+<div class="container-fluid g-0 promises-slideshow"> 
+    <div class="row promises oswald-font slides">
+        <div class="col-12 promises-background">    
+            <img src="{% static 'images/italy-night.jpg'%}" alt="A picture of Italy At Night">   
+            <ul class="promises-list" id="slides-list">
+                <li class="my-slides">
+                    <div class="circle-promises">
+                        <i class="fa-solid fa-check"></i>
+                        <h2>First Promise</h2>
+                        <p>We at Mutatio Promise Our Customers That All Our Pasta Dishes Include Fresh Pasta</p>
+                    </div>
+                </li>
+                <li class="my-slides">
+                    <div class="circle-promises">
+                        <i class="fa-solid fa-check"></i>
+                        <h2>Second Promise</h2>
+                        <p>We At Mutatio Promise Our Customers That All Our Pasta Is Made In The Restaurant By Seasoned Chefs</p>
+                    </div>
+                </li>
+                <li class="my-slides">
+                    <div class="circle-promises">
+                        <i class="fa-solid fa-check"></i>
+                        <h2>Third Promise </h2>
+                        <p>We At Mutatio Promise Our Customers That Service Will Be Amazing Thanks To Our Great Chefs And Our Hosts And Hostesses</p>
+                    </div>
+                </li>
+            </ul>
+            <button class="slide-arrow" id="prev-arrow">&#8249</button>
+            <button class="slide-arrow" id="next-arrow">&#8250</button> 
         </div>
-    
-        <div class="col-md-4 promises-col">
-            <div class="circle-promises">
-                <i class="fa-solid fa-check"></i>
-                <h2>Second Promise</h2>
-                <p>We At Mutatio Promise Our Customers That All Our Pasta Is Made In The Restaurant By Seasoned Chefs</p>
-            </div>
-        </div>
-        
-        <div class="col-md-4 promises-col">
-            <div class="circle-promises">
-                <i class="fa-solid fa-check"></i>
-                <h2>Third Promise </h2>
-                <p>We At Mutatio Promise Our Customers That Service Will Be Amazing Thanks To Our Great Chefs And Our Hosts And Hostesses</p>
-            </div>
-        </div>
-    </div>
+    </div> 
 </div>
 
 
 <div class="container-fluid g-0">
+    <div class="background-image-italy-night"></div>
     <div class="row g-0">
         <div class="col-12 italy-image">
             <img src ="{% static 'images/alley-italy.jpg'%}" alt="Image of alley in Italy" >

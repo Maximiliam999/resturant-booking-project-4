@@ -43,6 +43,7 @@ body{
     object-fit: cover;
     filter: brightness(50%);
 }
+
 .slogan{
     font-size: 35px;
     color: white !important;
@@ -74,36 +75,105 @@ body{
     max-width: 15%;
     max-height: 15%;
 }
+
 .promises{
     background-color: transparent;
     color: white;
-    border: 2px solid white;
-    border-radius: 50;
-    border-style: ridge;
-    border-width: 5px;
-    border-color: white;
-    border-left: 0;
-    border-right: 0;
-    position: relative;
+    padding: 0;
+    margin: 0;
 }
 
 .circle-promises {
-    width: 500px;
-    height: 500px;
-    line-height: 20px;
-    padding-top: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 50%;
-    font-size: 15px;
-    color: #fff;
+    padding: 1rem;
+    height: 500px;
+    width: 500px;
     text-align: center;
-    background-color: rgb(66, 45, 12);
+    color: white;
 }
+
 .circle-promises p {
     top: 50%;
     width: 90%;
-    padding-top: 150px;
+    padding-top: 50px;
     padding-left: 25px;
+    font-size: 25px;
 }
+
+.promises-slideshow{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.promises-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.promises-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.promises-list {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.my-slides {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid 15px wheat;
+    border-bottom: solid 15px wheat;
+    border-radius: 50%;
+    margin-top: 160px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.slide-arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: black;
+    border: none;
+    width: 3rem;
+    height: 8rem;
+    font-size: 4rem;
+    opacity: 0.7;
+    transition: opacity 100ms;
+    z-index: 2;
+}
+
+#prev-arrow{
+    left: 0;
+    border-radius: 0 1rem 1rem 0;
+    color: wheat;
+}
+
+#next-arrow {
+    right: 0;
+    border-radius: 1rem 0 0 1rem;
+    color: wheat;
+}
+
 
 #history-name {
     font-size: 80px;
@@ -114,7 +184,7 @@ body{
     color: white !important;
     font-size: 40px;
 }
-.promises-container h2 {
+.promises-slideshow h2 {
     color: rgb(245, 229, 205);
 }
 
@@ -205,33 +275,7 @@ li.nav-item {
 .nav-tabs{
     border-bottom: none;
 }
-.navbar-toggler-icon {
-    background-color: var(--bs-gray-700) !important;
-    color: var(--bs-gray-700) !important;
-}
-.navbar-toggler{
-    background-color: var(--bs-gray-700) !important;
-    color: var(--bs-gray-700) !important;
-}
-.circle {
-    width: 95%;
-    height: auto;
-    border: 2px solid white;
-    border-radius: 50px;
-    position: relative;
-    top: 50%;
-    left: 50px;
-    transform: translateY(-50%);
-    animation: rotateCircle 5s linear infinite;
-}
-@keyframes rotateCircle {
-    from {
-        transform: translateY(-50%) rotate(0deg);
-    }
-    to {
-        transform: translateY(50%) rotate(360deg);
-    }
-}
+
 .opentime {
     color: rgb(245, 229, 205);
     text-align: center;
@@ -354,6 +398,11 @@ li.nav-item {
     background-color: black;
 }
 
+.cancel-reservation {
+    margin-bottom: 15rem !important;
+    margin-top: 15rem !important;
+}
+
 /* ----------------------------------------Footer */
 .base-footer{
     position: absolute;
@@ -399,23 +448,23 @@ li.nav-item {
     }
     .promises{
         display: block;
-        margin-left: 450px;
         border: none;
+    }
+    .promises p {
+        font-size: 18px;
+        padding-top: 15px;
     }
     div.circle-promises{
         height: 200px;
         padding-bottom: 20px;
         padding-top: 0;
     }
-    .circle-promises p  {
-        padding-top: 25px;
+    .my-slides{
+        margin-top: 300px;
     }
 }
 
 @media screen and (max-width:1030px) {
-    .promises{
-        margin-left: 250px;
-    }
     li.nav-item {
         font-size: 33px;
     }
@@ -450,13 +499,13 @@ li.nav-item {
         margin-left: 30px;
         margin-top: 0;
     }
+    .my-slides{
+        margin-top: 550px;
+    }
 
 }
 
 @media screen and (max-width:768px) {
-    .promises{
-        margin-left: 140px;
-    }
     li.nav-item {
         font-size: 26px;
     }
@@ -490,20 +539,22 @@ li.nav-item {
         left: 0;
         margin-bottom: 0;
     }
+    .my-slides{
+        margin-top: 375px;
+    }
 }
 
 
-
 @media screen and (max-width:430px){
-    .promises{
-        margin-left: 50px;
-        margin-right: 10px;
-    }
     .promises-col{
         padding: 0;
     }
+    .slide-arrow{
+        height: 6rem;
+        width: 2rem;
+    }
     div.circle-promises{
-        height: 100px;
+        height: 115px;
         width: 90%;
     }
     .circle-promises {
@@ -511,7 +562,7 @@ li.nav-item {
     }
     .circle-promises p  {
         padding-top: 0px;
-        font-size: 7px;
+        font-size: 14px;
     }
     .circle-promises h2{
         font-size: 15px;
@@ -583,6 +634,12 @@ li.nav-item {
     }
 }
 
+@media screen and (max-device-width:428px) {
+    .my-slides {
+        margin-top: 200px;
+    }
+}
+
 @media screen and (max-width:320px) {
     li.nav-item {
         font-size: 18px;
@@ -611,6 +668,9 @@ li.nav-item {
     h2#history-name{
         font-size: 25px;
         line-height: 1;
+    }
+    .my-slides{
+        margin-top: 150px;
     }
 }
 /*MAKE NAV ITEMS BIGGER AND MOVE HEADER CHECK PHONE TO SEE IF IT'S GOOD*/
