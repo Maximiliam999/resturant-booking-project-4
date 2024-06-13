@@ -5,7 +5,6 @@ from phonenumber_field.formfields import PhoneNumberField
 from phonenumber_field.widgets import PhoneNumberPrefixWidget
 
 class BookingForm(forms.ModelForm):
-    phone = PhoneNumberField(widget=PhoneNumberPrefixWidget)
     class Meta:
         model = Booking
         fields = ('guests', 'date', 'time', 'name', 'phone', 'email', 'verify_cancellation_policy')
@@ -13,7 +12,6 @@ class BookingForm(forms.ModelForm):
         
 
 class CancellationBookingForm(forms.ModelForm):
-    phone = PhoneNumberField(widget=PhoneNumberPrefixWidget)
     class Meta:
         model = CancelBooking
         fields = ('name', 'phone')
