@@ -60,23 +60,36 @@ Mutatio is a website designed for the restaurant Mutatio. It incorporates a book
 
 ![Screenshot of choices on phone](/static/images/small_phone.png "choices as seen on or phone")
 
-- Booking
+- Booking and Cancel Booking
     - Booking has python testing on the views and forms. Done with unit testing and TestCase import from django.test. 
     - Tested on diffrent screen sizes, making the form wider or thiner depending on size. 
     - Manual testing done on the logic making sure a booking instance, if valid is sent and saved on the database. If not it states what the issue is, for example forgot to check box or date already booked full. 
-
-- Cancel Booking
     - Cancel Booking has python testing on the views and forms. Done with unit testing and TestCase import from django.test.
-    - Tested on diffrent screen sizes, making the form wider or thiner depending on size. 
     - Manual testing done on the logic testing if information put in the form matches one in the database, it's removed. If not it pops up a message for the user saying there is no match in the database.
+
+    ### Booking Forms Testing
+
+    ![Screenshot of booking python formstest](/static/images/booking_testing1.png "python booking forms tests")
+    ![Screenshot of booking python forms test](/static/images/booking_testing2.png "python booking forms tests")
+    ![Screenshot of booking python forms test](/static/images/booking_testing3.png "python booking forms tests")
+
+    ### Booking Views Testing
+
+    ![Screenshot of booking python forms test](/static/images/booking_test_view1.png "python booking forms tests")
+    ![Screenshot of booking python forms test](/static/images/booking_test_view2.png "python booking forms tests")
+    ![Screenshot of booking python forms test](/static/images/booking_test_view2.png "python booking forms tests")
 
 - Home
     - Home views has been tested with unit testing and TestCase import from django.test checking respond code and that it contains the expected information.
     - It has been tested and works on diffrent screen sizes such as desktop, laptop, tablet and phones using am I responsive website and manual checking on diffrent devices.
+    ### Home views testing
+    ![Screenshot of home page python views tests](/static/images/home_tests.png "home page python views tests")
 
 - Menu
     - Menu views has been tested with unit testing and TestCase import from django.test checking respond code and that it contains the expected information.
     - It has been tested and works on diffrent screen sizes such as desktop, laptop, tablet and phones using am I responsive website and manual checking on diffrent devices.
+    ### Menu views testing
+    ![Screenshot of menu page python views tests](/static/images/menu_tests.png "menu page python views tests")
 
 - Carousel
     - JavaScript Carousel has been tested using jshint testing and manual testing. 
@@ -132,4 +145,4 @@ Mutatio is a website designed for the restaurant Mutatio. It incorporates a book
     - And the font was taken from https://fonts.google.com/
     - The Images Were Taken From https://pixabay.com/sv/ and google images with the CCL option added
     - Carousel inspired by https://www.w3schools.com/howto/howto_js_slideshow.asp
-    - Recipes taken from https://www.delish.com/cooking/recipe-ideas/
+    - Recipes taken from https://www.delish.com/cooking/recipe-ideas/ 
