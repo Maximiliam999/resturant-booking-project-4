@@ -1,0 +1,683 @@
+
+  
+body{
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    background-color: rgb(139, 112, 71);
+    color: rgb(245, 229, 205);
+}
+
+/*--------------------------------------------Colors*/
+.background-brown {
+    background-color: rgb(139, 112, 71);
+}
+
+/* ----------------------------------------Landing Page */
+.landing-image {
+    position: relative;
+    text-align: center;
+    background-color: black;
+    z-index: 1;
+}
+.landing-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    z-index: 1;
+}
+.italy-image {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    
+}
+.italy-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.slogan{
+    font-size: 35px;
+    color: white !important;
+}
+.mutatio-header {
+    font-size: 70px;
+}
+#mutatio {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    bottom: 75%;
+    left: 50%;
+    color: rgb(245, 229, 205);
+}
+.text-center-italy-image {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.chefs-hat {
+    z-index: 2;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.75;
+    max-width: 15%;
+    max-height: 15%;
+}
+
+.promises{
+    background-color: transparent;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.circle-promises {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    padding: 1rem;
+    height: 500px;
+    width: 500px;
+    text-align: center;
+    color: white;
+}
+
+.circle-promises p {
+    top: 50%;
+    width: 90%;
+    padding-top: 50px;
+    padding-left: 25px;
+    font-size: 25px;
+}
+
+.promises-slideshow{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.promises-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.promises-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.promises-list {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.my-slides {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid 15px wheat;
+    border-bottom: solid 15px wheat;
+    border-radius: 50%;
+    margin-top: 160px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.slide-arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: black;
+    border: none;
+    width: 3rem;
+    height: 8rem;
+    font-size: 4rem;
+    opacity: 0.7;
+    transition: opacity 100ms;
+    z-index: 2;
+}
+
+#prev-arrow{
+    left: 0;
+    border-radius: 0 1rem 1rem 0;
+    color: wheat;
+}
+
+#next-arrow {
+    right: 0;
+    border-radius: 1rem 0 0 1rem;
+    color: wheat;
+}
+
+
+#history-name {
+    font-size: 80px;
+    color: rgb(245, 229, 205);
+}
+
+#history-story{
+    color: white !important;
+    font-size: 40px;
+}
+.promises-slideshow h2 {
+    color: rgb(245, 229, 205);
+}
+
+/* ----------------------------------------Special paddings/margins/text/fonts */
+.center-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 20px;
+}
+.text-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.text-center-top {
+    position: absolute;
+    bottom: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.bottom-left {
+    position: absolute;
+    bottom: 0px;
+    left: 16px;
+  }
+.bottom-right{
+    position: absolute;
+    bottom: 0;
+    right: 16px;
+}
+.text-center-align {
+    text-align: center;
+}
+.solid-border{
+    border: solid 1px black;
+}
+.italianno-font {
+    font-family: "Italianno", cursive;
+    font-weight: 200;
+}
+.oswald-font {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+.alert {
+    padding-top: 50px !important;
+    margin-top: 60px !important;
+    padding-bottom: 0px !important;
+    padding-left: 200px !important;
+}
+
+.invalid-feedback {
+    color: white !important;
+}
+/*--------------------------------------------Navbar*/
+.navbar{
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    color: rgb(245, 229, 205);
+
+}
+
+.nav-link {
+    background: transparent !important;
+    margin-left: 5px ;
+    font-family: "Italianno", cursive;
+    color: rgb(245, 229, 205);
+}
+a.nav-link.active {
+    font-family: "Italianno", cursive !important;
+    color: rgb(245, 229, 205) !important;
+}
+.navbar-toggler{
+    margin-left: 20px;
+}
+li.nav-item {
+    font-size: 40px;
+}
+.nav-tabs .nav-link.active {
+    border-style: groove;
+    border-color: black;
+    border-width: 5px;
+    
+}
+.nav-tabs{
+    border-bottom: none;
+}
+
+.opentime {
+    color: rgb(245, 229, 205);
+    text-align: center;
+    position: absolute;
+    top: 15px;
+    right: 8px;
+    font-size: 35px;
+}
+#home-button {
+    font-size: 100px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*--------------------------------------------Menu*/
+
+.menu-header-img{
+    position: relative;
+    text-align: center;
+    z-index: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-header-img img {
+    width: 100%;
+    height: 300px;
+    display: block;
+    object-fit: cover;
+    filter: brightness(80%);
+}
+
+.menu-options{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 0;
+    margin: 0;
+    font-size: 20px;
+    width: 100%;
+    height: auto;
+    border: 2px solid white;
+    border-style: ridge;
+    border-width: 5px;
+    border-color: white;
+    border-left: 0;
+    border-right: 0;
+    position: relative;
+    left: 0;
+    
+}
+
+.starter-img{
+    position: relative;
+    text-align: center;
+    z-index: 0;
+    padding: 0;
+    margin: 0;
+}
+.starter-img img {
+    width: 100%;
+    height: 800px;
+    display: block;
+    object-fit: cover;
+    filter: brightness(80%);
+}
+.main-course-img {
+    position: relative;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.main-course-img img {
+    width: 100%;
+    height: 800px;
+    display: block;
+    object-fit: cover;
+}
+
+.desert-img {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.desert-img img {
+    width: 100%;
+    height: 800px;
+    display: block;
+    object-fit: cover;
+}
+
+/* ----------------------------------------Booking Form */
+
+.booking-form{
+    border-style: ridge;
+    border-width: 15px;
+    border-color: rgb(44, 44, 44);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.booking-page {
+    background-color: rgb(139, 112, 71);
+    padding-top: 50px;
+}
+
+#hint_id_verify_cancellation_policy{
+    color: white;
+}
+
+.form-buttons {
+    background-color: black;
+}
+
+.cancel-reservation {
+    margin-bottom: 15rem !important;
+    margin-top: 15rem !important;
+}
+
+/* ----------------------------------------Footer */
+.base-footer{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: auto;
+    border-style: groove;
+    border-color: rgb(44, 44, 44);
+    border-width: 5px;
+    background-color: rgb(22, 22, 22);
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+}
+
+.made-by{
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+
+/* ----------------------------------------Media Queries */
+
+@media screen and (max-width:1440px) {
+    #home-button{
+        margin-top: 10px;
+    }
+    li.nav-item {
+        font-size: 35px;
+    }
+    h1.mutatio-header {
+        font-size: 50px;
+    }
+    .mutatio-header{
+        padding-top: 35px;
+        margin-bottom: 0;
+    }
+    p.opentime {
+        font-size: 40px;
+        margin-top: 10px;
+    }
+    .promises{
+        display: block;
+        border: none;
+    }
+    .promises p {
+        font-size: 18px;
+        padding-top: 15px;
+    }
+    div.circle-promises{
+        height: 200px;
+        padding-bottom: 20px;
+        padding-top: 0;
+    }
+    .my-slides{
+        margin-top: 300px;
+    }
+}
+
+@media screen and (max-width:1030px) {
+    li.nav-item {
+        font-size: 33px;
+    }
+    .nav-links {
+        top: 10px;
+        left: 0px;
+    }
+    p.opentime{
+        font-size: 35px;
+    }
+    h1.mutatio-header {
+        font-size: 30px;
+        margin-left: 25px;
+    }
+    .chefs-hat{
+        margin-left: 15px;
+    }
+    a.nav-link.center-content.active{
+        padding-bottom: 40px;
+    }
+    p#history-story{
+        margin-top: 40px;
+        width: 650px;
+    }
+    h2#history-name{
+        margin-bottom: 0;
+    }
+    p.bottom-left {
+        width: 25%;
+    }
+    #home-button{
+        margin-left: 30px;
+        margin-top: 0;
+    }
+    .my-slides{
+        margin-top: 550px;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    li.nav-item {
+        font-size: 26px;
+    }
+    h1.mutatio-header {
+        font-size: 30px;
+    }
+    #home-button{
+        font-size: 70px;
+        top: 40px;
+    }
+    p#history-story{
+        font-size: 30px;
+        width: 500px;
+    }
+    h2#history-name{
+        margin-bottom: 0;
+        font-size: 60px;
+    }
+    #mutatio{
+        bottom: 70%;
+    }
+    p.opentime{
+        font-size: 25px;
+    }
+    p.made-by{
+        width: 25%;
+        right: 0;
+        margin-bottom: 0;
+    }
+    p.bottom-left{
+        left: 0;
+        margin-bottom: 0;
+    }
+    .my-slides{
+        margin-top: 375px;
+    }
+}
+
+
+@media screen and (max-width:430px){
+    .promises-col{
+        padding: 0;
+    }
+    .slide-arrow{
+        height: 6rem;
+        width: 2rem;
+    }
+    div.circle-promises{
+        height: 115px;
+        width: 90%;
+    }
+    .circle-promises {
+        line-height: 15px;
+    }
+    .circle-promises p  {
+        padding-top: 0px;
+        font-size: 14px;
+    }
+    .circle-promises h2{
+        font-size: 15px;
+        margin-bottom: 0;
+    }
+    .nav-links{
+        left: 2px;
+        top: 5px;
+    }
+    .navbar-nav {
+        display: block !important;
+        width: 58px;
+    }
+    .cancel-reservation {
+        padding-top: 70px;
+    }
+    .create-reservation{
+        padding-top: 70px;
+    }
+    li.nav-item {
+        font-size: 22px;
+    }
+    .nav-tabs .nav-link.active {
+        border-width: 4px;
+    }
+    .nav-link {
+        margin-left: 0px;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    h1.mutatio-header{
+        font-size: 20px;
+        margin-left: 0;
+    }
+    #mutatio{
+        bottom: 60%;
+    }
+    #home-button{
+        font-size: 30px;
+        top: 25px;
+        margin-left: 0;
+    }
+    .chefs-hat{
+        margin-top: 20px;
+    }
+    .slogan p {
+        font-size: 20px;
+        margin-bottom: 0;
+        margin-top: 15px;
+    }
+    p.opentime {
+        font-size: 15px;
+        margin-top: 0px;
+    }
+    p#history-story{
+        margin-top: 50px;
+        font-size: 1.1rem;
+        width: 325px;
+    }
+    h2#history-name{
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+    .footer {
+        font-size: 10px;
+    }
+    .py-5 {
+        padding-bottom: 0 !important;
+    }
+}
+
+@media screen and (max-device-width:428px) {
+    .my-slides {
+        margin-top: 200px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    li.nav-item {
+        font-size: 18px;
+    }
+    #home-button{
+        font-size: 30px;
+        top: 20px;
+    }
+    p.opentime{
+        font-size: 10px;
+        margin-top: 0;
+        padding-bottom: 15px;
+    }
+    .slogan p {
+        margin-left: 10px;
+    }
+    .footer {
+        font-size: 8px;
+    }
+    p#history-story{
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+        width: 300px;
+ 
+    }
+    h2#history-name{
+        font-size: 25px;
+        line-height: 1;
+    }
+    .my-slides{
+        margin-top: 150px;
+    }
+}
+/*MAKE NAV ITEMS BIGGER AND MOVE HEADER CHECK PHONE TO SEE IF IT'S GOOD*/
