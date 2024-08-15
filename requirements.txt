@@ -15,6 +15,7 @@ django-phonenumber-field==7.3.0
 django-phonenumbers==1.0.1
 django-polymorphic==3.1.0
 django-sekizai==4.1.0
+django-summernote==0.8.20.0
 django-treebeard==4.7.1
 djangocms-admin-style==3.3.1
 djangocms-attributes-field==3.0.0
