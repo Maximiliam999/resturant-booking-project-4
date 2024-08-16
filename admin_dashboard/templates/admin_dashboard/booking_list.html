@@ -3,7 +3,7 @@
 {% block content %}
 <div class="container mt-5">
     <h2>Bookings</h2>
-    <a href="{% url 'create_booking' %}" class="btn btn-primary mb-3">Create New Booking</a>
+    <a href="{% url 'admin_dashboard:create_booking' %}" class="btn btn-primary mb-3">Create New Booking</a>
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -22,8 +22,8 @@
                 <td>{{ booking.time }}</td>
                 <td>{{ booking.guests }}</td>
                 <td>
-                    <a href="{% url 'edit_booking' booking.pk %}" class="btn btn-sm btn-warning">Edit</a>
-                    <a href="{% url 'delete_booking' booking.pk %}" class="btn btn-sm btn-danger">Delete</a>
+                    <a href="{% url 'admin_dashboard:edit_booking' booking.pk %}" class="btn btn-sm btn-warning">Edit</a>
+                    <a href="{% url 'admin_dashboard:delete_booking' booking.pk %}" class="btn btn-sm btn-danger">Delete</a>
                 </td>
             </tr>
             {% endfor %}

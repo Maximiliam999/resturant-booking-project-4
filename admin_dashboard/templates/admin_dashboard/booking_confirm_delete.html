@@ -6,7 +6,7 @@
     <p>Are you sure you want to delete "{{ booking }}"?</p>
     <form method="post">
         {% csrf_token %}
-        <a href="{% url 'list_bookings' %}" class="btn btn-secondary">Cancel</a>
+        <a href="{% url 'admin_dashboard:list_bookings' %}" class="btn btn-secondary">Cancel</a>
         <button type="submit" class="btn btn-danger">Delete</button>
     </form>
 </div>
