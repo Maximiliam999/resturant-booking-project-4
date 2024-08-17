@@ -618,32 +618,62 @@ li.nav-item {
 }
 
 /* Very small devices (phones in portrait) */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 321px) {
     li.nav-item {
         font-size: 0.9rem;
     }
     #home-button {
         font-size: 1.2rem;
-        top: 5px;
+        top: 10px;
     }
     p.opentime {
         font-size: 0.7rem;
     }
     .slogan p {
+        font-size: 0.8rem;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    h1.mutatio-header{
+        font-family: 'Courier New', Courier, monospace;
+        margin-bottom: 0;
         font-size: 0.9rem;
+    }
+    .alert{
+        padding-top: 250px !important;
+        padding-left: 0 !important;
+    }
+    .booking-list td{
+        padding: 0 !important;
+        font-size: 12px;
+    }
+    .booking-list{
+        padding: 0 !important;
+        font: 12px;
+        border: none !important;
     }
     .footer {
         font-size: 0.6rem;
     }
+    p.opentime {
+        padding-top: 180px;
+    }
     p#history-story {
-        font-size: 0.8rem;
-        width: 100%;
+        font-size: 0.75rem;
+        width: 190%;
+        padding-right: 100px;
+        font-weight: bold;
+       color: rgb(245, 229, 205) !important;
+    }
+    .italy-image img{
+        height: 110%;
     }
     h2#history-name {
         font-size: 1rem;
     }
     .my-slides {
         margin-top: 0.5rem;
+    }
+    .promises-background img {
     }
 }
 /*MAKE NAV ITEMS BIGGER AND MOVE HEADER CHECK PHONE TO SEE IF IT'S GOOD*/
