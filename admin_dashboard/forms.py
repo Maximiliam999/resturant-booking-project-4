@@ -9,7 +9,7 @@ class BookingForm(forms.ModelForm):
         fields = ['user', 'guests', 'date', 'time', 'name', 'phone', 'email', 'verify_cancellation_policy']
         widgets = {
             'date': forms.DateInput(attrs={'placeholder': 'YYYY-MM-DD', 'type': 'date'}),
-            'phone': forms.TextInput(attrs={'placeholder': 'Your phone number'}),
+            'phone': forms.TextInput(attrs={'placeholder': '+46738876534'}),
         }
 
 class CancelBookingForm(forms.Form):
