@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container mt-5">
+<div class="container register mt-5">
     <h2>Register</h2>
-    <form method="post" action="{% url 'admin_dashboard:register' %}">
+    <form class="booking-form register-form" method="post" action="{% url 'admin_dashboard:register' %}">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="btn btn-primary">Register</button>

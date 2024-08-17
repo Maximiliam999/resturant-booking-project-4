@@ -33,27 +33,30 @@
             <div>
                 <a id="home-button" class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page" href="{% url 'home' %}">Mutatio</a>
             </div>
-        <div class="top-left nav-links">
-            <ul class="navbar-nav nav-tabs flex-row">
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page" href="{% url 'home' %}">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == menu_url %}active{% endif %}" href="{% url 'menu' %}">Menu</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == booking_url %}active{% endif %}" aria-current="page" href="{% url 'booking' %}">Booking</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == cancel_bookings_url %}active{% endif %}" aria-current="page" href="{% url 'cancel_bookings' %}">Cancel Reservation</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'admin_dashboard:adminlogin' %}">Admin Login</a>
-                </li>
-                
-            </ul>
-        </div>
-        <p class="opentime">Monday-Saturday 17-23:30</p>
+            <div class="top-left nav-links">
+                <ul class="navbar-nav nav-tabs flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == menu_url %}active{% endif %}" href="{% url 'menu' %}">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == booking_url %}active{% endif %}" aria-current="page" href="{% url 'booking' %}">Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == cancel_bookings_url %}active{% endif %}" aria-current="page" href="{% url 'cancel_bookings' %}">Cancel</a>
+                    </li>
+                    {% if request.path == home_url %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'admin_dashboard:adminlogin' %}">Admin Login</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+            {% if request.path == home_url %}
+            <p class="opentime">Monday-Saturday 17-23:30</p>
+            {% endif %}
         </div>
     </nav>
 
@@ -75,16 +78,16 @@
    
 
     <!-- Footer-->
-    <footer class="footer mt-auto py-5 base-footer">
-        <p class="made-by">
+    <footer class="footer base-footer">
+        <p>
            Made By Code Instituters
         </p>
-        <p class="text-center">
+        <p>
             Get In Touch: <br>
             Phone: +39888333777 <br>
             Mail: Mutatiosupport@email.com
         </p>
-        <p class="bottom-left">
+        <p>
             Piazza Municipale, 42, 66911 Fara San Martino CH, Italien
         </p>
     </footer>

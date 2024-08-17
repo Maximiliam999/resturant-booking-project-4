@@ -1,13 +1,18 @@
 
-  
+
 body{
+    display: flex;
+    flex-direction: column;
     font-family: "Oswald", sans-serif;
     font-weight: 700;
     font-style: normal;
     background-color: rgb(139, 112, 71);
     color: rgb(245, 229, 205);
+    
 }
-
+.login {
+    flex: 1;
+}
 /*--------------------------------------------Colors*/
 .background-brown {
     background-color: rgb(139, 112, 71);
@@ -322,16 +327,12 @@ li.nav-item {
 
 .menu-options{
     text-align: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
     padding-left: 0;
     margin: 0;
     font-size: 20px;
     width: 100%;
     height: auto;
-    border: 2px solid white;
-    border-style: ridge;
-    border-width: 5px;
+    border-top: 2px solid white;
     border-color: white;
     border-left: 0;
     border-right: 0;
@@ -407,17 +408,43 @@ li.nav-item {
 }
 
 .cancel-reservation {
-    margin-bottom: 15rem !important;
-    margin-top: 15rem !important;
+    margin-bottom: 80rem !important;
+    margin-top: 20rem !important;
 }
-
+.login {
+    margin-bottom: 80rem !important;
+    margin-top: 20rem !important;
+    height: 100%;
+}
+#login {
+    margin-top: 15rem;
+    margin-bottom: 0;
+}
+.booking-list {
+    margin-bottom: 80rem !important;
+    margin-top: 20rem !important;
+}
+.register {
+    margin-bottom: 80rem !important;
+    margin-top: 20rem !important;
+}
+.register-form {
+    text-align: left;
+}
+.create-booking-admin {
+    margin-bottom: 80rem !important;
+    margin-top: 20rem !important;
+}
+.confirm-deletion {
+    margin-bottom: 80rem !important;
+    margin-top: 20rem !important; 
+}
 /* ----------------------------------------Footer */
 .base-footer{
-    position: absolute;
+    flex-shrink: 0;
     text-align: center;
     width: 100%;
-    bottom: auto;
-    border-style: groove;
+    bottom: 0;
     border-color: rgb(44, 44, 44);
     border-width: 5px;
     background-color: rgb(22, 22, 22);
@@ -435,249 +462,188 @@ li.nav-item {
 
 /* ----------------------------------------Media Queries */
 
-@media screen and (max-width:1440px) {
-    #home-button{
-        margin-top: 10px;
+@media screen and (min-width: 1440px) {
+    /* Styles for larger screens if needed */
+}
+
+/* Medium devices (laptops) */
+@media screen and (max-width: 1440px) and (min-width: 1024px) {
+    #home-button {
+        font-size: 4rem;
     }
     li.nav-item {
-        font-size: 35px;
+        font-size: 2rem;
     }
     h1.mutatio-header {
-        font-size: 50px;
+        font-size: 3rem;
     }
-    .mutatio-header{
-        padding-top: 35px;
-        margin-bottom: 0;
-    }
-    p.opentime {
-        font-size: 40px;
-        margin-top: 10px;
-    }
-    .promises{
-        display: block;
-        border: none;
+    .mutatio-header {
+        padding-top: 2rem;
     }
     .promises p {
-        font-size: 18px;
-        padding-top: 15px;
-    }
-    div.circle-promises{
-        height: 200px;
-        padding-bottom: 20px;
-        padding-top: 0;
-    }
-    .my-slides{
-        margin-top: 300px;
-    }
-}
-
-@media screen and (max-width:1030px) {
-    li.nav-item {
-        font-size: 33px;
-    }
-    .nav-links {
-        top: 10px;
-        left: 0px;
-    }
-    p.opentime{
-        font-size: 35px;
-    }
-    h1.mutatio-header {
-        font-size: 30px;
-        margin-left: 25px;
-    }
-    .chefs-hat{
-        margin-left: 15px;
-    }
-    a.nav-link.center-content.active{
-        padding-bottom: 40px;
-    }
-    p#history-story{
-        margin-top: 40px;
-        width: 650px;
-    }
-    h2#history-name{
-        margin-bottom: 0;
-    }
-    p.bottom-left {
-        width: 25%;
-    }
-    #home-button{
-        margin-left: 30px;
-        margin-top: 0;
-    }
-    .my-slides{
-        margin-top: 550px;
-    }
-
-}
-
-@media screen and (max-width:768px) {
-    li.nav-item {
-        font-size: 26px;
-    }
-    h1.mutatio-header {
-        font-size: 30px;
-    }
-    #home-button{
-        font-size: 70px;
-        top: 40px;
-    }
-    p#history-story{
-        font-size: 30px;
-        width: 500px;
-    }
-    h2#history-name{
-        margin-bottom: 0;
-        font-size: 60px;
-    }
-    #mutatio{
-        bottom: 70%;
-    }
-    p.opentime{
-        font-size: 25px;
-    }
-    p.made-by{
-        width: 25%;
-        right: 0;
-        margin-bottom: 0;
-    }
-    p.bottom-left{
-        left: 0;
-        margin-bottom: 0;
-    }
-    .my-slides{
-        margin-top: 375px;
-    }
-}
-
-
-@media screen and (max-width:430px){
-    .promises-col{
-        padding: 0;
-    }
-    .slide-arrow{
-        height: 6rem;
-        width: 2rem;
-    }
-    div.circle-promises{
-        height: 115px;
-        width: 90%;
+        font-size: 1.2rem;
     }
     .circle-promises {
-        line-height: 15px;
+        height: 20rem;
+        width: 20rem;
     }
-    .circle-promises p  {
-        padding-top: 0px;
-        font-size: 14px;
+    .my-slides {
+        margin-top: 10rem;
     }
-    .circle-promises h2{
-        font-size: 15px;
-        margin-bottom: 0;
+}
+
+/* Small devices (tablets) */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    li.nav-item {
+        font-size: 1.5rem;
     }
-    .nav-links{
-        left: 2px;
-        top: 5px;
+    h1.mutatio-header {
+        font-size: 2rem;
+    }
+    #home-button {
+        font-size: 3rem;
+    }
+    p#history-story {
+        font-size: 1.2rem;
+        width: 80%;
+    }
+    h2#history-name {
+        font-size: 2rem;
+    }
+    .my-slides {
+        margin-top: 5rem;
+    }
+}
+
+/* Extra small devices (phones) */
+@media screen and (max-width: 768px) {
+    li.nav-item {
+        font-size: 1.5rem;
+    }
+    h1.mutatio-header {
+        font-size: 1.5rem;
+    }
+    #home-button {
+        font-size: 2rem;
+    }
+    p#history-story {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.4rem;
+        width: 100%;
+        padding-top: 150px;
+        padding-bottom: 0;
+    }
+    h2#history-name {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 2rem;
+    }
+    .my-slides {
+        margin-top: 3rem;
+    }
+    .navbar-nav {
+        flex-direction: column !important;
+    }
+    a.nav-link {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.1rem;
+        border: none !important;
+    }
+    .nav-tabs .nav-link.active{
+        font-family: 'Courier New', Courier, monospace !important;
+    }
+    a#home-button.nav-link.active {
+        font-family: 'Courier New', Courier, monospace !important;
+    }
+}
+
+/* Very small devices (phones in portrait) */
+@media screen and (max-width: 430px) {
+    .slide-arrow {
+        height: 4rem;
+        width: 2rem;
+    }
+    .circle-promises {
+        height: 18rem;
+        width: 18rem;
+    }
+    .circle-promises p {
+        font-size: 1rem;
+        padding-top: 25px;
+    }
+    .promises-list {
+        padding-top: 250px;
+    }
+    .nav-links {
+        left: 0;
+        top: 0;
     }
     .navbar-nav {
         display: block !important;
-        width: 58px;
-    }
-    .cancel-reservation {
-        padding-top: 70px;
-    }
-    .create-reservation{
-        padding-top: 70px;
+        width: 100%;
     }
     li.nav-item {
-        font-size: 22px;
+        font-size: 1rem;
     }
-    .nav-tabs .nav-link.active {
-        border-width: 4px;
-    }
-    .nav-link {
-        margin-left: 0px;
-        padding-bottom: 0;
-        padding-top: 0;
-    }
-    h1.mutatio-header{
-        font-size: 20px;
-        margin-left: 0;
-    }
-    #mutatio{
-        bottom: 60%;
-    }
-    #home-button{
-        font-size: 30px;
-        top: 25px;
-        margin-left: 0;
-    }
-    .chefs-hat{
-        margin-top: 20px;
-    }
-    .slogan p {
-        font-size: 20px;
-        margin-bottom: 0;
-        margin-top: 15px;
+    #home-button {
+        font-size: 1.5rem;
+        top: 10px;
     }
     p.opentime {
-        font-size: 15px;
-        margin-top: 0px;
+        font-size: 0.8rem;
     }
-    p#history-story{
-        margin-top: 50px;
-        font-size: 1.1rem;
-        width: 325px;
+    p#history-story {
+        font-size: 0.9rem;
+        width: 120%;
+        padding-top: 100px;
     }
-    h2#history-name{
-        font-size: 30px;
-        margin-bottom: 0;
+    h2#history-name {
+        font-size: 1.2rem;
     }
     .footer {
-        font-size: 10px;
+        font-size: 0.7rem;
     }
-    .py-5 {
-        padding-bottom: 0 !important;
-    }
-}
-
-@media screen and (max-device-width:428px) {
     .my-slides {
-        margin-top: 200px;
-    }
-}
-
-@media screen and (max-width:320px) {
-    li.nav-item {
-        font-size: 18px;
-    }
-    #home-button{
-        font-size: 30px;
-        top: 20px;
+        margin-top: 1rem;
     }
     p.opentime{
-        font-size: 10px;
-        margin-top: 0;
-        padding-bottom: 15px;
+        font-family: 'Courier New', Courier, monospace;
+        padding-top: 250px;
+    }
+    .create-reservation{
+        padding-top: 100px;
+    }
+    h2#login {
+        padding-top: 0;
+    }
+}
+
+/* Very small devices (phones in portrait) */
+@media screen and (max-width: 320px) {
+    li.nav-item {
+        font-size: 0.9rem;
+    }
+    #home-button {
+        font-size: 1.2rem;
+        top: 5px;
+    }
+    p.opentime {
+        font-size: 0.7rem;
     }
     .slogan p {
-        margin-left: 10px;
+        font-size: 0.9rem;
     }
     .footer {
-        font-size: 8px;
+        font-size: 0.6rem;
     }
-    p#history-story{
-        font-size: 0.85rem;
-        margin-bottom: 20px;
-        width: 300px;
- 
+    p#history-story {
+        font-size: 0.8rem;
+        width: 100%;
     }
-    h2#history-name{
-        font-size: 25px;
-        line-height: 1;
+    h2#history-name {
+        font-size: 1rem;
     }
-    .my-slides{
-        margin-top: 150px;
+    .my-slides {
+        margin-top: 0.5rem;
     }
 }
 /*MAKE NAV ITEMS BIGGER AND MOVE HEADER CHECK PHONE TO SEE IF IT'S GOOD*/
