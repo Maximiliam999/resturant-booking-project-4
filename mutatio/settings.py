@@ -109,7 +109,8 @@ if 'test' in sys.argv:
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*.gitpod.io",
-    "https://*.herokuapp.com"
+    "https://*.herokuapp.com",
+    "https://8000-maximiliam9-resturantbo-6b6987d8psr.ws.codeinstitute-ide.net"
 ]
 
 # Password validation
