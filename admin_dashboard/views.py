@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login as auth_login
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from booking.models import Booking
-from .forms import BookingForm, CancelBookingForm
+from .forms import BookingForm, CancelBookingForm, CustomUserCreationForm
 
 def login(request):
     if request.method == 'POST':
@@ -12,10 +13,23 @@ def login(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             auth_login(request, user)
+            messages.success(request, f"Welcome, {user.username}! You are now logged in.")
             return redirect('admin_dashboard:list_bookings')  # Redirect to the bookings list
         else:
             messages.error(request, "Invalid username or password.")
     return render(request, 'admin_dashboard/login.html')
+
+def register(request):
+    if request.method == 'POST':
+        form = CustomUserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            auth_login(request, user)
+            messages.success(request, 'Registration successful!')
+            return redirect('admin_dashboard:list_bookings')  # Redirect to the bookings list or any other page
+    else:
+        form = CustomUserCreationForm()
+    return render(request, 'admin_dashboard/register.html', {'form': form})
 
 @login_required
 def create_booking(request):

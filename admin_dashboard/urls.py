@@ -5,6 +5,7 @@ app_name = 'admin_dashboard'
 
 urlpatterns = [
     path('login/', views.login, name='adminlogin'),
+    path('register/', views.register, name='register'),
     path('book/', views.create_booking, name='create_booking'),
     path('cancel/', views.cancel_booking, name='cancel_booking'),
     path('bookings/', views.list_bookings, name='list_bookings'),
