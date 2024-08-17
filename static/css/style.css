@@ -532,6 +532,7 @@ li.nav-item {
         width: 100%;
         padding-top: 150px;
         padding-bottom: 0;
+        color: rgb(248, 177, 106) !important;
     }
     h2#history-name {
         font-family: 'Courier New', Courier, monospace;
@@ -595,6 +596,8 @@ li.nav-item {
         font-size: 0.9rem;
         width: 120%;
         padding-top: 100px;
+        font-weight: bold;
+        color: rgb(248, 177, 106) !important;
     }
     h2#history-name {
         font-size: 1.2rem;
@@ -658,11 +661,11 @@ li.nav-item {
         padding-top: 180px;
     }
     p#history-story {
-        font-size: 0.75rem;
+        font-size: 0.8rem;
         width: 190%;
         padding-right: 100px;
         font-weight: bold;
-       color: rgb(245, 229, 205) !important;
+        color: rgb(248, 177, 106) !important;
     }
     .italy-image img{
         height: 110%;

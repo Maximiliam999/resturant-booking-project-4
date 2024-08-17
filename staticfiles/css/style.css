@@ -50,7 +50,7 @@ body{
 
 .slogan{
     font-size: 35px;
-    color: white !important;
+    color: rgb(245, 229, 205)
 }
 .mutatio-header {
     font-size: 70px;
@@ -185,7 +185,7 @@ body{
 }
 
 #history-story{
-    color: white !important;
+    color: rgb(248, 177, 106) !important;
     font-size: 40px;
 }
 .promises-slideshow h2 {
@@ -462,12 +462,9 @@ li.nav-item {
 
 /* ----------------------------------------Media Queries */
 
-@media screen and (min-width: 1440px) {
-    /* Styles for larger screens if needed */
-}
+/* Styles for larger screens if needed */
 
-/* Medium devices (laptops) */
-@media screen and (max-width: 1440px) and (min-width: 1024px) {
+@media screen and (max-width: 1440px){
     #home-button {
         font-size: 4rem;
     }
@@ -491,9 +488,9 @@ li.nav-item {
         margin-top: 10rem;
     }
 }
+/* Medium devices (laptops) */
 
-/* Small devices (tablets) */
-@media screen and (max-width: 1024px) and (min-width: 768px) {
+@media screen and (max-width: 1025px){
     li.nav-item {
         font-size: 1.5rem;
     }
@@ -503,22 +500,29 @@ li.nav-item {
     #home-button {
         font-size: 3rem;
     }
-    p#history-story {
-        font-size: 1.2rem;
-        width: 80%;
+    #history-story {
+        font-size: 1.6rem;
+        padding-top: 100px;
+        width: 100%;
+        font-family: 'Courier New', Courier, monospace;
+        color: rgb(248, 177, 106) !important;
+        font-weight: bold;
     }
     h2#history-name {
-        font-size: 2rem;
+        font-size: 4rem;
     }
     .my-slides {
         margin-top: 5rem;
     }
 }
+/* Small devices (tablets) */
 
-/* Extra small devices (phones) */
 @media screen and (max-width: 768px) {
     li.nav-item {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+    }
+    a.nav-link {
+
     }
     h1.mutatio-header {
         font-size: 1.5rem;
@@ -532,6 +536,8 @@ li.nav-item {
         width: 100%;
         padding-top: 150px;
         padding-bottom: 0;
+        color: rgb(248, 177, 106) !important;
+        font-weight: bold;
     }
     h2#history-name {
         font-family: 'Courier New', Courier, monospace;
@@ -554,9 +560,14 @@ li.nav-item {
     a#home-button.nav-link.active {
         font-family: 'Courier New', Courier, monospace !important;
     }
+    .promises-list {
+        padding-top: 200px;
+    }
 }
+/* Extra small devices (phones) */
 
-/* Very small devices (phones in portrait) */
+
+
 @media screen and (max-width: 430px) {
     .slide-arrow {
         height: 4rem;
@@ -577,27 +588,38 @@ li.nav-item {
         left: 0;
         top: 0;
     }
+    a.nav-link{
+        font-size: 1.5rem;
+    }
     .navbar-nav {
         display: block !important;
         width: 100%;
     }
-    li.nav-item {
-        font-size: 1rem;
-    }
     #home-button {
         font-size: 1.5rem;
-        top: 10px;
+        top: 15px;
     }
     p.opentime {
         font-size: 0.8rem;
     }
-    p#history-story {
+    .slogan p {
         font-size: 0.9rem;
-        width: 120%;
-        padding-top: 100px;
+        font-family: 'Courier New', Courier, monospace !important;
+        color: rgb(245, 229, 205);
     }
-    h2#history-name {
-        font-size: 1.2rem;
+    h1.mutatio-header{
+        font-family: 'Courier New', Courier, monospace;
+        margin-bottom: 0;
+        font-size: 0.9rem;
+    }
+    p#history-story {
+        font-size: 1rem;
+        width: 150%;
+        padding-top: 100px;
+        padding-right: 125px;
+        margin-right: 100px;
+        font-weight: bold;
+        color: rgb(255 128 0) !important;
     }
     .footer {
         font-size: 0.7rem;
@@ -607,6 +629,7 @@ li.nav-item {
     }
     p.opentime{
         font-family: 'Courier New', Courier, monospace;
+        font-size: 1rem;
         padding-top: 250px;
     }
     .create-reservation{
@@ -616,27 +639,31 @@ li.nav-item {
         padding-top: 0;
     }
 }
-
 /* Very small devices (phones in portrait) */
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 360px) {
     li.nav-item {
         font-size: 0.9rem;
     }
+    a.nav-link{
+        font-size: 1rem;
+    }
     #home-button {
         font-size: 1.2rem;
-        top: 10px;
+        top: 12px;
     }
     p.opentime {
         font-size: 0.7rem;
     }
     .slogan p {
-        font-size: 0.8rem;
-        font-family: 'Courier New', Courier, monospace;
+        font-size: 0.8rem !important;
+        font-family: 'Courier New', Courier, monospace !important;
+        color: rgb(245, 229, 205);
     }
     h1.mutatio-header{
         font-family: 'Courier New', Courier, monospace;
         margin-bottom: 0;
-        font-size: 0.9rem;
+        padding-top: 10px;
+        font-size: 0.8rem;
     }
     .alert{
         padding-top: 250px !important;
@@ -658,22 +685,21 @@ li.nav-item {
         padding-top: 180px;
     }
     p#history-story {
-        font-size: 0.75rem;
-        width: 190%;
-        padding-right: 100px;
-        font-weight: bold;
-       color: rgb(245, 229, 205) !important;
+        font-size: 0.85rem !important;
+        width: 140% !important;
+        padding-right: 125px !important;
+        margin-right: 100px !important;
+        font-weight: bold !important;
+        color: rgb(255 128 0) !important;
     }
     .italy-image img{
         height: 110%;
     }
-    h2#history-name {
-        font-size: 1rem;
-    }
     .my-slides {
         margin-top: 0.5rem;
     }
-    .promises-background img {
-    }
 }
+
+
+
 /*MAKE NAV ITEMS BIGGER AND MOVE HEADER CHECK PHONE TO SEE IF IT'S GOOD*/
